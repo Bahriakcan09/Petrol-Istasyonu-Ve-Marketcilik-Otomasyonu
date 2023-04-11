@@ -21,5 +21,10 @@ namespace Petrol_Istasyonu_Ve_Marketcilik_Otomasyonu
         {
 
         }
+
+        private void LoginBtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
