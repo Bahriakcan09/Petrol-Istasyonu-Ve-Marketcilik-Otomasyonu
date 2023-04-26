@@ -204,6 +204,12 @@
       <DependentUpon>ControlPageForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Data.cs" />
+    <Compile Include="Depobilgileri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Depobilgileri.Designer.cs">
+      <DependentUpon>Depobilgileri.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -216,14 +222,11 @@
     <Compile Include="MarketPageForm.Designer.cs">
       <DependentUpon>MarketPageForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="PetrolPageForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PetrolPageForm.Designer.cs">
-      <DependentUpon>PetrolPageForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Depobilgileri.resx">
+      <DependentUpon>Depobilgileri.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>

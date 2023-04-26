@@ -4,21 +4,23 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Petrol_Istasyonu_Ve_Marketcilik_Otomasyonu
 {
-    public partial class PetrolPageForm : Form
+    public partial class Depobilgileri : Form
     {
-        public PetrolPageForm()
+        public Depobilgileri()
         {
             InitializeComponent();
         }
-        double D_Benzin = 0, D_Dizel = 0, D_LPG = 0;
+        double M_Benzin = 0, M_Dizel = 0, M_LPG = 0;
         double E_Benzin = 0, E_Dizel = 0, E_LPG = 0;
         string[] depo_bilgileri;
+
         private void button1_Click(object sender, EventArgs e)
         {
             try
@@ -63,25 +65,27 @@ namespace Petrol_Istasyonu_Ve_Marketcilik_Otomasyonu
             progressBar_guncelle();
         }
 
+
+
         private void txt_depo_oku()
         {
             depo_bilgileri = System.IO.File.ReadAllLines(Application.StartupPath + "\\Depo.txt");
-            D_Benzin = Convert.ToDouble(depo_bilgileri[0]);
-            D_Dizel = Convert.ToDouble(depo_bilgileri[1]);
-            D_LPG = Convert.ToDouble(depo_bilgileri[2]);
+            M_Benzin = Convert.ToDouble(depo_bilgileri[0]);
+            M_Dizel = Convert.ToDouble(depo_bilgileri[1]);
+            M_LPG = Convert.ToDouble(depo_bilgileri[2]);
 
         }
         private void txt_depo_yaz()
         {
-            label1.Text = D_Benzin.ToString("N");
-            label2.Text = D_Dizel.ToString("N");
-            label3.Text = D_LPG.ToString("N");
+            label1.Text = M_Benzin.ToString("N");
+            label7.Text = M_Dizel.ToString("N");
+            label3.Text = M_LPG.ToString("N");
         }
         private void progressBar_guncelle()
         {
-            progressBar1.Value = Convert.ToInt16(D_Benzin);
-            progressBar2.Value = Convert.ToInt16(D_Dizel);
-            progressBar3.Value = Convert.ToInt16(D_LPG);
+            progressBar1.Value = Convert.ToInt16(M_Benzin);
+            progressBar2.Value = Convert.ToInt16(M_Dizel);
+            progressBar3.Value = Convert.ToInt16(M_LPG);
         }
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -94,5 +98,6 @@ namespace Petrol_Istasyonu_Ve_Marketcilik_Otomasyonu
             progressBar_guncelle();
         }
     }
-
+    
 }
+
