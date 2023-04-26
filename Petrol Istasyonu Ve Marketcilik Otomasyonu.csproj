@@ -183,6 +183,7 @@
     <Compile Include="ControlPageForm.Designer.cs">
       <DependentUpon>ControlPageForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="internetCheck.cs" />
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>

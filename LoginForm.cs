@@ -21,6 +21,11 @@ namespace Petrol_Istasyonu_Ve_Marketcilik_Otomasyonu
         }
         private async void LoginBtn_Click(object sender, EventArgs e)
         {
+            if (!internetCheckClass.internetCheck())
+            {
+                MessageBox.Show("Internet Baglantısı Yok.");
+                return;
+            };
             bool login = await loginAsync();
             if (login)
             {
