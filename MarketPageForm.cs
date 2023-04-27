@@ -47,10 +47,10 @@ namespace Petrol_Istasyonu_Ve_Marketcilik_Otomasyonu
         {
             var Urun = new Urunler()
             {
-                Id = int.Parse(txtStudentId.Text),
-                Ad = txtStudentName.Text,
-                Adet = int.Parse(txtStudentDepartment.Text),
-                Fiyat = int.Parse(txtStudentMail.Text)
+                Id = int.Parse(UrunIdTxt.Text),
+                Ad = UrunAdTxt.Text,
+                Adet = int.Parse(UrunAdetTxt.Text),
+                Fiyat = int.Parse(UrunFiyatTxt.Text)
                
             };
         
@@ -103,10 +103,14 @@ namespace Petrol_Istasyonu_Ve_Marketcilik_Otomasyonu
                 listStudent.Add(Urun);
             }
         
-            dataGridStudents.ItemsSource = listStudent;
+            dataGridUrunler.ItemsSource = listUrunler;
         }
 
+        private void MarketPageForm_Load(object sender, EventArgs e)
+        {
+
         }
+    }
     }
 }
 
